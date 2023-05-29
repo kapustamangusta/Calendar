@@ -1,0 +1,74 @@
+﻿@using Calendar.Models.ViewModels;
+@model EventViewModel;
+
+<div class="left p-2 col-12">
+    @Html.Partial("Calendar")
+</div>
+<div class="right col-12">
+    <div class="today-date">
+        <div class="event-day"></div>
+        <div class="event-date"></div>
+    </div>
+    <div class="events">
+
+    </div>
+    <div class="event-wrapper add-event-wrapper">
+        <div class="event-header">
+            <div class="title">Добавить событие</div>
+            <i class="fas fa-times close"></i>
+        </div>
+        <div class="event-body">
+            <div class="event-input">
+                <input type="text" placeholder="Event Name" class="event-name" />
+            </div>
+            <div class="event-input">
+                <select class="event-categ">
+                    
+                </select>
+            </div>
+            <div class="event-input">
+                <input type="text" placeholder="Event Time From" class="event-time-from" />
+            </div>
+            <div class="event-input">
+                <input type="text" placeholder="Event Time To" class="event-time-to" />
+            </div>
+            <div class="event-input">
+                <textarea rows="3" maxlength="100" class="event-description" placeholder="Описание" id="floatingTextarea2"></textarea>
+            </div>
+        </div>
+        <div class="event-footer">
+            <button class="event-btn add-event-btn">Добавить</button>
+        </div>
+    </div>
+    <div class="event-wrapper event-update-delete-wrapper">
+        <div class="event-header">
+            <div class="title">Изменить событие</div>
+            <i class="fas fa-times close"></i>
+        </div>
+        <div class="event-body">
+            <div class="event-input">
+                <select class="event-categ">
+                 
+                </select>
+            </div>
+            <div class="event-input">
+                <input type="text" placeholder="Event Time From" class="event-time-from" />
+            </div>
+            <div class="event-input">
+                <input type="text" placeholder="Event Time To" class="event-time-to" />
+            </div>
+            <div class="event-input">
+                <textarea rows="3" maxlength="100" class="event-description" placeholder="Описание" id="floatingTextarea2"></textarea>
+            </div>
+        </div>
+        <div class="event-footer event-update-delete-footer">
+            <button class="event-btn update-event">Сохранить</button>
+            <button class="event-btn remove-event">Удалить</button>
+        </div>
+    </div>
+    <button class="add-event">
+        <i class="fas fa-plus"></i>
+    </button>
+</div>
+
+
